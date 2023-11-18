@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcular IMC</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Tabela IMC</h1>
+        <div class="coluna left">
+            <h3>IMC</h3>
+            <p>
+                Menor que 18,5<br>
+                Entre 18,5 e 24,9<br>
+                Entre 25 e 29,9<br>
+                Entre 30 e 34,99<br>
+                Entre 35 e 39,99<br>
+                Acima de 40<br>
+            </p>
+        </div>
+        <div class="coluna right">
+            <h3>RESULTADO</h3>
+            <p>
+                Abaixo do peso.<br>
+                Peso normal.<br>
+                Sobrepeso.<br>
+                Obesidade grau I.<br>
+                Obesidade grau II (severa).<br>
+                Obesidade grau III (mórbida).<br>
+            </p>
+        </div>
+        <h1>Calcule seu IMC</h1>
+        <form id="form">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" name="peso" id="peso" required>
+            <label for="altura">Altura (m):</label>
+            <input type="number" name="altura" id="altura" required>
+            <button id="calcular">Calcular</button>
+        </form>
+        <div id="result"></div>
+    </section>
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+        const form = document.querySelector('#form');
+        const inputPeso = form.querySelector("#peso");
+        const inputAltura = form.querySelector("#altura");
+        form.querySelector('#calcular').addEventListener('click', function (event) {
+            event.preventDefault(event);
+            let peso = Number(inputPeso.value);
+            let altura = Number(inputAltura.value);
+            getResult(peso, altura);
+        });
+    </script>
+</body>
+
+</html>
