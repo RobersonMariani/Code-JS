@@ -14,9 +14,7 @@ function validateCpf(inputCpf) {
 
     //Pega o primeiro digito
     let firstDigit = calculateDigit(arrayCpf, 10);
-    console.log(firstDigit)
     firstDigit = (11 - firstDigit) < 10 ? (11 - firstDigit) : 0;
-    console.log(firstDigit)
     arrayCpf.push(firstDigit);
 
     //Pega o segundo digito
