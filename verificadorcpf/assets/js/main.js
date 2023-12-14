@@ -24,7 +24,6 @@ function validateCpf(inputCpf) {
 
     //Verifica os digitos com o cpf digitado, se bater o CPF é válido se não é inválido
     let verifiedCpf = arrayCpf.join('');
-    console.log(verifiedCpf)
     verifiedCpf === cpf ? alert("CPF válido") : alert("CPF inválido");
 }
 
