@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário Cadastro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Formulário Cadastro</h1>
+        <ul>
+            <li>Nenhum campo pode estar vazio</li>
+            <li>Usuário só poderá conter letras e/ou números</li>
+            <li>Usuário deverá ter entre 3 e 12 caracteres</li>
+            <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+        <div>
+            <form class="form" action="/" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" class="validate">
+                <label for="lname">Sobrenome:</label>
+                <input type="text" name="lname" id="lname" class="validate">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" class="validate cpf">
+                <label for="user">Usuário:</label>
+                <input type="text" name="user" id="user" class="validate user">
+                <label for="pass">Senha:</label>
+                <input type="password" name="pass" id="pass" class="validate">
+                <label for="confirmPass">Confirmar Senha:</label>
+                <input type="password" name="confirmPass" id="confirmPass" class="validate">
+                <button type="submit">Validar</button>
+            </form>
+        </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
